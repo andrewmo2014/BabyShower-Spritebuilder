@@ -19,7 +19,6 @@ CCNode* level;
     CCLabelTTF *_title;
     CCPhysicsNode *_worldPhysics;
     //CCNode *_level;
-    
 }
 
 @synthesize audioPlayer;
