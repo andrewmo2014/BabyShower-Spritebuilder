@@ -16,6 +16,7 @@
     Banner *_banner;
     HudDisplay *_hud;
     CCLabelTTF *_title;
+    CCButton *_nextButton;
 }
 
 -(id)init{
@@ -27,6 +28,8 @@
 -(void) onEnter{
     [super onEnter];
     _hud.changeCloudText = YES;
+    [self schedule:@selector(activateNextButton) interval:2.0f repeat:0 delay:2.0f];
+    
 }
 
 
@@ -36,11 +39,20 @@
     self.userInteractionEnabled = TRUE;
     CCLOG(@"opening read");
     _hud.myLabel = _title;
+    _nextButton.visible = NO;
     
 }
 
+
+-(void)activateNextButton{
+    _nextButton.visible = YES;
+}
+
+
 - (void) nextScene {
     CCLOG(@"next button pressed");
+    
+    _nextButton.visible = NO;
     
     CCBAnimationManager *animationManager = self.userObject;
     [animationManager runAnimationsForSequenceNamed:@"dropBabyAnim"];

@@ -20,7 +20,7 @@
 }
 
 -(void)didLoadFromCCB {
-    CCLOG( @"bubble logged ");
+    CCLOG( @"bubble logged");
     self.physicsBody.collisionType = @"bubble";
 }
 
