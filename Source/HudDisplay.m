@@ -16,12 +16,12 @@
     CCNode *_bottomCloud;
     CCNode *_happyMeter;
     CCNode *_pauseButton;
+    CCBAnimationManager *animationManager;
     
 }
 
 -(id)init{
     if(self=[super init]){
-        _changeCloudText = NO;
     }
     return self;
 }
@@ -30,20 +30,34 @@
     // tell this scene to accept touches
     CCLOG(@"hud read");
     //_myLabel = _topCloudText;
+    animationManager = self.userObject;
+    animationManager.delegate = self;
+    [animationManager runAnimationsForSequenceNamed:@"topCloudMoveDown"];
+    
 
 }
 
--(void)update:(CCTime)delta{
-    if ( _changeCloudText == YES ){
-        [_topCloudText setString: _myLabel.string];
-        [_topCloudText setFontColor: _myLabel.fontColor];
-        [_topCloudText setFontName: _myLabel.fontName];
-        [_topCloudText setFontSize: _myLabel.fontSize];
-        [_topCloudText setHorizontalAlignment: _myLabel.horizontalAlignment];
-        [_topCloudText setOutlineColor: _myLabel.outlineColor];
-        [_topCloudText setColor: _myLabel.color];
-        _changeCloudText = NO;
+-(void)changeTextWeak: (NSString *)string{
+    [_topCloudText setString: string];
+}
+-(void)changeTextStrong: (CCLabelTTF *)myLabel{
+    [_topCloudText setString: myLabel.string];
+    [_topCloudText setFontColor: myLabel.fontColor];
+    [_topCloudText setFontName: myLabel.fontName];
+    [_topCloudText setFontSize: myLabel.fontSize];
+    [_topCloudText setHorizontalAlignment: myLabel.horizontalAlignment];
+    [_topCloudText setOutlineColor: myLabel.outlineColor];
+    [_topCloudText setColor: myLabel.color];
+}
+
+-(void) completedAnimationSequenceNamed:(NSString *)name{
+    if ([name isEqualToString:@"topCloudMoveDown"]){
+        CCLOG(@"initial drop is over");
     }
+}
+
+-(void)update:(CCTime)delta{
+    
 }
 
 

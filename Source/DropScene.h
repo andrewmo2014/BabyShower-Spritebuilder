@@ -11,7 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface DropScene : CCScene <CCPhysicsCollisionDelegate>{
+@interface DropScene : CCScene <CCPhysicsCollisionDelegate, CCBAnimationManagerDelegate>{
     NSMutableArray *bubbles;
     BOOL nextLevel;
     AVAudioPlayer *audioPlayer;

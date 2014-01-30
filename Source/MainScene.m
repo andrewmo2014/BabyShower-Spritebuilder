@@ -13,6 +13,7 @@
     HudDisplay *_hud;
     CCLabelTTF *_title;
     CCButton *_playButton;
+    CCBAnimationManager *animationManager;
 }
 
 -(id)init{
@@ -22,24 +23,27 @@
 }
 
 - (void)didLoadFromCCB {
-    _hud.myLabel = _title;
     _playButton.visible = NO;
+    animationManager = self.userObject;
+    animationManager.delegate = self;
 }
 
 -(void) onEnter{
     [super onEnter];
-   _hud.changeCloudText = YES;
-    [self schedule:@selector(activatePlayButton) interval:2.0f repeat:0 delay:2.0f];
-}
-
--(void)activatePlayButton{
-    _playButton.visible = YES;
+    [_hud changeTextStrong:_title];
+    
 }
 
 - (void) play {
     CCLOG(@"start button pressed");
     CCScene *gameLayerScene = [CCBReader loadAsScene:@"ModeSelector"];
     [[CCDirector sharedDirector] replaceScene:gameLayerScene];
+}
+
+-(void) completedAnimationSequenceNamed:(NSString *)name{
+    if ([name isEqualToString:@"TitleAnim"]){
+        _playButton.visible = YES;
+    }
 }
 
 @end

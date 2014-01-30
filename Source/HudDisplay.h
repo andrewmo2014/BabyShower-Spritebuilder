@@ -8,9 +8,13 @@
 
 #import "CCNode.h"
 
-@interface HudDisplay : CCNode
+@interface HudDisplay : CCNode <CCBAnimationManagerDelegate>
 
-@property BOOL changeCloudText;
-@property CCLabelTTF* myLabel;
+@property NSString* mynewCloudText;
+//@property BOOL changeCloudText;
+//@property CCLabelTTF* myLabel;
+
+-(void)changeTextWeak: (NSString *)string;
+-(void)changeTextStrong: (CCLabelTTF *)label;
 
 @end

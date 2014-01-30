@@ -69,8 +69,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.78125</real>
-									<real>0.34999999403953552</real>
+									<real>0.69375002384185791</real>
+									<real>0.20517246425151825</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -98,8 +98,6 @@
 								<string>BubbleSmall.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -172,6 +170,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

@@ -17,6 +17,7 @@
     HudDisplay *_hud;
     CCLabelTTF *_title;
     CCButton *_nextButton;
+    CCBAnimationManager *animationManager;
 }
 
 -(id)init{
@@ -27,8 +28,9 @@
 
 -(void) onEnter{
     [super onEnter];
-    _hud.changeCloudText = YES;
-    [self schedule:@selector(activateNextButton) interval:2.0f repeat:0 delay:2.0f];
+    [_hud changeTextStrong:_title];
+    [animationManager runAnimationsForSequenceNamed:@"introductionAnim"];
+
     
 }
 
@@ -38,14 +40,10 @@
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     CCLOG(@"opening read");
-    _hud.myLabel = _title;
+    //_hud.myLabel = _title;
+    animationManager = self.userObject;
+    animationManager.delegate = self;
     _nextButton.visible = NO;
-    
-}
-
-
--(void)activateNextButton{
-    _nextButton.visible = YES;
 }
 
 
@@ -54,16 +52,19 @@
     
     _nextButton.visible = NO;
     
-    CCBAnimationManager *animationManager = self.userObject;
+    //CCBAnimationManager *animationManager = self.userObject;
+    
     [animationManager runAnimationsForSequenceNamed:@"dropBabyAnim"];
+    [_hud.userObject runAnimationsForSequenceNamed:@"topCloudMoveUp"];
     
+    //[self completedAnimationSequenceNamed:@"dropBabyAnim"];
+
+
     
-    CCBAnimationManager *animationManager2 = _hud.userObject;
-    [animationManager2 runAnimationsForSequenceNamed:@"topCloudMoveUp"];
-    CCLOG(@"length %lu", (unsigned long)[[animationManager2 sequences] count]);
+    //CCBAnimationManager *animationManager2 = _hud.userObject;
+    //CCLOG(@"length %lu", (unsigned long)[[animationManager2 sequences] count]);
     
-    [self performSelector:@selector(startTutorial) withObject:nil afterDelay:2.0f];
-    
+    //[self performSelector:@selector(startTutorial) withObject:nil afterDelay:2.0f];
     
     
     
@@ -72,10 +73,28 @@
     
 }
 
--(void) startTutorial{
-    CCScene *gameLayerScene = [CCBReader loadAsScene:@"DropScene"];
-    [[CCDirector sharedDirector] replaceScene:gameLayerScene];
+//-(void) startTutorial{
+//    CCScene *gameLayerScene = [CCBReader loadAsScene:@"DropScene"];
+//    [[CCDirector sharedDirector] replaceScene:gameLayerScene];
+//
+//}
 
+-(void) completedAnimationSequenceNamed:(NSString *)name{
+    
+    if ([name isEqualToString: @"introductionAnim"]){
+        CCLOG(@"yes");
+        _nextButton.visible = YES;
+    }
+    
+    if ([name isEqualToString: @"dropBabyAnim"]){
+        CCLOG(@"no");
+        CCScene *gameLayerScene = [CCBReader loadAsScene:@"DropScene"];
+        [[CCDirector sharedDirector] replaceScene:gameLayerScene];
+    }
+    //if ([name isEqualToString: @"topCloudMoveUp"]){
+    //    CCScene *gameLayerScene = [CCBReader loadAsScene:@"DropScene"];
+    //    [[CCDirector sharedDirector] replaceScene:gameLayerScene];
+    //}
 }
 
 @end

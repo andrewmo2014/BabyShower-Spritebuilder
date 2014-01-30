@@ -35,11 +35,6 @@
 				<key>children</key>
 				<array>
 					<dict>
-						<key>animatedProperties</key>
-						<dict>
-							<key>0</key>
-							<dict/>
-						</dict>
 						<key>baseClass</key>
 						<string>CCBFile</string>
 						<key>children</key>
@@ -69,7 +64,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.78125</real>
+									<real>0.17812499403953552</real>
 									<real>0.34999999403953552</real>
 									<integer>0</integer>
 									<integer>2</integer>

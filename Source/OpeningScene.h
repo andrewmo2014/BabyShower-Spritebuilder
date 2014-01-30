@@ -10,6 +10,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface OpeningScene : CCScene
+@interface OpeningScene : CCScene <CCBAnimationManagerDelegate>
 
 @end

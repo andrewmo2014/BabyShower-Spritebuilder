@@ -69,8 +69,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.78125</real>
-									<real>0.34999999403953552</real>
+									<real>0.25</real>
+									<real>0.25</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>2</integer>
