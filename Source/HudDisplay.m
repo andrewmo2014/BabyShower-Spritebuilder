@@ -17,7 +17,6 @@ float happyMeterMaxWidth;
     CCLabelTTF *_topCloudText;
     CCNode *_bottomCloud;
     CCNode *_happyMeter;
-    CCNode *_pauseButton;
     CCNode *_tiltLeft;
     CCNode *_tiltRight;
     CCNode *_pressDown;
@@ -34,10 +33,6 @@ float happyMeterMaxWidth;
         
     }
     return self;
-}
-
--(void) setPauseButtonVisible{
-    _pauseButton.visible = YES;
 }
 
 -(void) setHappyMeter:(bool)val{
@@ -99,6 +94,10 @@ float happyMeterMaxWidth;
     if ([name isEqualToString:@"topCloudMoveDown"]){
         CCLOG(@"initial drop is over");
     }
+}
+
+-(float) getHappyScore{
+    return _happyMeter.contentSize.width;
 }
 
 -(void)update:(CCTime)delta{

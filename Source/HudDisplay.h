@@ -20,7 +20,7 @@
 -(void)changeTextWeak: (NSString *)string;
 -(void)changeTextStrong: (CCLabelTTF *)label;
 -(void)setHappyMeter: (bool) val;
--(void) setPauseButtonVisible;
 -(void)setCloudIm: (NSString*)string2: (BOOL)val;
+-(float)getHappyScore;
 
 @end

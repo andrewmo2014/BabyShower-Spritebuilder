@@ -42,6 +42,12 @@ float levelSpeed;
     CCPhysicsNode *_worldPhysics;
     //CCNode *_level;
     CCBAnimationManager *animationManager;
+    CCButton *_pauseButton;
+    CCNode *_pauseMenu;
+    CCButton *_pauseRestart;
+    CCButton *_pauseResume;
+    CCButton *_pauseMainMenu;
+
 }
 
 //@synthesize audioPlayer;
@@ -66,16 +72,98 @@ float levelSpeed;
     return self;
 }
 
+-(void) gameLost{
+    _pauseMenu.visible = YES;
+    _pauseResume.visible = NO;
+    _pauseResume.enabled = NO;
+    _pauseMainMenu.visible = YES;
+    _pauseMainMenu.enabled = YES;
+    _pauseRestart.visible = YES;
+    _pauseRestart.enabled = YES;
+    [_banner changeTextWeak:@"Game Over"];
+    [[CCDirector sharedDirector] pause];
+}
+
+-(void) gameWon{
+    _pauseMenu.visible = YES;
+    _pauseResume.visible = NO;
+    _pauseResume.enabled = NO;
+    _pauseMainMenu.visible = YES;
+    _pauseMainMenu.enabled = YES;
+    _pauseRestart.visible = YES;
+    _pauseRestart.enabled = YES;
+    if( isTutorial){
+        [_banner changeTextWeak:@"Complete"];
+    }
+    else{
+        [_banner changeTextWeak:@"Demo Done"];
+    }
+    [[CCDirector sharedDirector] pause];
+}
+
+-(void) pause{
+    _pauseMenu.visible = YES;
+    _pauseResume.visible = YES;
+    _pauseResume.enabled = YES;
+    _pauseMainMenu.visible = YES;
+    _pauseMainMenu.enabled = YES;
+    _pauseRestart.visible = YES;
+    _pauseRestart.enabled = YES;
+    [_banner changeTextWeak:@"Paused"];
+    [[CCDirector sharedDirector] pause];
+}
+
+-(void)resume{
+    [[CCDirector sharedDirector] resume];
+
+    _pauseMenu.visible = NO;
+    _pauseResume.visible = NO;
+    _pauseResume.enabled = NO;
+    _pauseMainMenu.visible = NO;
+    _pauseMainMenu.enabled = NO;
+    _pauseRestart.visible = NO;
+    _pauseRestart.enabled = NO;
+    [_banner changeTextWeak:@"Tutorial"];
+    
+
+}
+
+-(void)mainMenu{
+    [[CCDirector sharedDirector] resume];
+
+    
+    CCScene *gameLayerScene = [CCBReader loadAsScene:@"ModeSelector"];
+    [[CCDirector sharedDirector] replaceScene: gameLayerScene];
+    
+
+    
+
+}
+
+-(void)restart{
+    [[CCDirector sharedDirector] resume];
+
+    
+    CCScene *gameLayerScene = [CCBReader loadAsScene:@"DropScene"];
+    [[CCDirector sharedDirector] replaceScene: gameLayerScene];
+    
+
+    
+    
+}
+
 -(void) onEnter{
     [super onEnter];
     
-    if( isTutorial ){
+    [animationManager runAnimationsForSequenceNamed:@"InitialDrop"];
+
+    if( isTutorial){
+        [_banner changeTextWeak:@"Tutorial"];
+        [self instructionsText:openText1];
         currentLevel = 0;
-        currentText = openText1;
         _fallingBaby.isDeactive = YES;
-        [self performSelector:@selector(instructionsText:) withObject:openText1 afterDelay:0.0f];
-        [self performSelector:@selector(LoadStage1) withObject:nil afterDelay:4.0f];
     }
+
 }
 
 -(void)instructionsText: (NSString *)string{
@@ -119,6 +207,15 @@ float levelSpeed;
 - (void)didLoadFromCCB {
     
     
+    
+    _pauseMenu.visible = NO;
+    _pauseResume.visible = NO;
+    _pauseResume.enabled = NO;
+    _pauseMainMenu.visible = NO;
+    _pauseMainMenu.enabled = NO;
+    _pauseRestart.visible = NO;
+    _pauseRestart.enabled = NO;
+    
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     //_worldPhysics.debugDraw = TRUE;
@@ -127,8 +224,8 @@ float levelSpeed;
     animationManager = self.userObject;
     animationManager.delegate = self;
     
-    [_hud setPauseButtonVisible];
-    [_banner changeTextWeak:@"Tutorial"];
+    _pauseButton.visible = YES;
+    
     
     
     //Lets Do tutorial first
@@ -178,7 +275,7 @@ float levelSpeed;
     //_levelNode = level;
     
     //CCBAnimationManager* animationManager = level.userObject;
-    //[animationManager runAnimationsForSequenceNamed:@"levelMove"];
+
     
 }
 
@@ -290,13 +387,19 @@ float levelSpeed;
                     break;
                 case 9:
                     [self instructionsText:openText8];
+                    [self gameWon];
                     break;
                 default:
                     break;
             }
         }
         
+        if( [_hud getHappyScore] <= 0.0f){
+            [self gameLost];
+        }
+        
     }
+    
 }
     
 -(void)updateLevel{
@@ -337,6 +440,12 @@ float levelSpeed;
 }
 
 -(void) completedAnimationSequenceNamed:(NSString *)name{
+    if( [name isEqualToString:@"InitialDrop"]){
+        if( isTutorial ){
+            currentText = openText1;
+            [self LoadStage1];
+        }
+    }
     
 }
 
