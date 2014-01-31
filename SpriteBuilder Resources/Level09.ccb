@@ -38,54 +38,7 @@
 						<key>animatedProperties</key>
 						<dict>
 							<key>0</key>
-							<dict>
-								<key>position</key>
-								<dict>
-									<key>keyframes</key>
-									<array>
-										<dict>
-											<key>easing</key>
-											<dict>
-												<key>type</key>
-												<integer>1</integer>
-											</dict>
-											<key>name</key>
-											<string>position</string>
-											<key>time</key>
-											<real>0.0</real>
-											<key>type</key>
-											<integer>3</integer>
-											<key>value</key>
-											<array>
-												<real>0.95625001192092896</real>
-												<real>-0.068965516984462738</real>
-											</array>
-										</dict>
-										<dict>
-											<key>easing</key>
-											<dict>
-												<key>type</key>
-												<integer>1</integer>
-											</dict>
-											<key>name</key>
-											<string>position</string>
-											<key>time</key>
-											<real>14</real>
-											<key>type</key>
-											<integer>3</integer>
-											<key>value</key>
-											<array>
-												<real>0.95625001192092896</real>
-												<real>-0.068965516984462738</real>
-											</array>
-										</dict>
-									</array>
-									<key>name</key>
-									<string>position</string>
-									<key>type</key>
-									<integer>3</integer>
-								</dict>
-							</dict>
+							<dict/>
 						</dict>
 						<key>baseClass</key>
 						<string>CCBFile</string>
@@ -110,22 +63,17 @@
 								<string></string>
 							</dict>
 							<dict>
-								<key>baseValue</key>
-								<array>
-									<real>0.95625001192092896</real>
-									<real>-0.068965516984462738</real>
-								</array>
 								<key>name</key>
 								<string>position</string>
 								<key>type</key>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.95625001192092896</real>
-									<real>-0.068965516984462738</real>
+									<real>306</real>
+									<real>-40</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -181,11 +129,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.86562502384185791</real>
-									<real>-0.11379310488700867</real>
+									<real>277</real>
+									<real>-66</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -246,11 +194,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.76249998807907104</real>
-									<real>-0.16379310190677643</real>
+									<real>244</real>
+									<real>-95</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -306,11 +254,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.65625</real>
-									<real>-0.20689655840396881</real>
+									<real>210</real>
+									<real>-120.00000762939453</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -366,11 +314,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.54062497615814209</real>
-									<real>-0.25172412395477295</real>
+									<real>173</real>
+									<real>-145.99998474121094</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -426,11 +374,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.453125</real>
-									<real>-0.30689653754234314</real>
+									<real>140</real>
+									<real>-167.99998474121094</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -486,11 +434,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.34062498807907104</real>
-									<real>-0.36379310488700867</real>
+									<real>99</real>
+									<real>-191</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -546,11 +494,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.26249998807907104</real>
-									<real>-0.40689656138420105</real>
+									<real>64</real>
+									<real>-214</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -606,11 +554,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.15312500298023224</real>
-									<real>-0.48620688915252686</real>
+									<real>33</real>
+									<real>-244</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -666,11 +614,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.1875</real>
-									<real>-0.567241370677948</real>
+									<real>25</real>
+									<real>-282</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -726,11 +674,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.27187499403953552</real>
-									<real>-0.6310344934463501</real>
+									<real>24</real>
+									<real>-323</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -786,11 +734,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.36562499403953552</real>
-									<real>-0.69310343265533447</real>
+									<real>34</real>
+									<real>-363</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -846,11 +794,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.44687500596046448</real>
-									<real>-0.73448276519775391</real>
+									<real>65</real>
+									<real>-393</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -906,11 +854,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.54374998807907104</real>
-									<real>-0.78103446960449219</real>
+									<real>105</real>
+									<real>-405</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -966,11 +914,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.640625</real>
-									<real>-0.8137931227684021</real>
+									<real>143</real>
+									<real>-414</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -997,80 +945,6 @@
 						</array>
 					</dict>
 					<dict>
-						<key>animatedProperties</key>
-						<dict>
-							<key>0</key>
-							<dict/>
-						</dict>
-						<key>baseClass</key>
-						<string>CCBFile</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
-						<string>SmallBubble</string>
-						<key>hidden</key>
-						<true/>
-						<key>memberVarAssignmentName</key>
-						<string></string>
-						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>name</string>
-								<key>type</key>
-								<string>StringSimple</string>
-								<key>value</key>
-								<string></string>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>0.77812498807907104</real>
-									<real>-0.85344827175140381</real>
-									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>0.5</real>
-									<real>0.5</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>ccbFile</string>
-								<key>type</key>
-								<string>CCBFile</string>
-								<key>value</key>
-								<string>BubbleSmall.ccb</string>
-							</dict>
-						</array>
-						<key>selected</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>animatedProperties</key>
-						<dict>
-							<key>0</key>
-							<dict/>
-						</dict>
 						<key>baseClass</key>
 						<string>CCBFile</string>
 						<key>children</key>
@@ -1100,11 +974,439 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.89375001192092896</real>
-									<real>-0.88793104887008667</real>
+									<real>181</real>
+									<real>-424</real>
 									<integer>0</integer>
-									<integer>2</integer>
-									<integer>2</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>0.5</real>
+									<real>0.5</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>BubbleSmall.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>SmallBubble</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>215</real>
+									<real>-451</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>0.5</real>
+									<real>0.5</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>BubbleSmall.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>Branch</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>36</real>
+									<real>-64.999992370605469</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>Branch.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>Branch</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>268.99993896484375</real>
+									<real>-296</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>rotation</string>
+								<key>type</key>
+								<string>Degrees</string>
+								<key>value</key>
+								<real>180</real>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>Branch.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>Branch</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>29</real>
+									<real>-558</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>Branch.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>SmallBubble</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>248</real>
+									<real>-480</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>0.5</real>
+									<real>0.5</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>BubbleSmall.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>SmallBubble</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>273</real>
+									<real>-514</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>0.5</real>
+									<real>0.5</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>BubbleSmall.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>SmallBubble</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>0</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>280</real>
+									<real>-556</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -1328,7 +1630,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>7.4333333969116211</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

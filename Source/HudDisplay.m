@@ -8,6 +8,8 @@
 
 #import "HudDisplay.h"
 
+float happyMeterMaxWidth;
+
 
 @implementation HudDisplay{
     CCNode *_topCloud;
@@ -20,10 +22,23 @@
     
 }
 
+@synthesize happyMeterLength;
+@synthesize happyMeterResizing;
+
 -(id)init{
     if(self=[super init]){
+        
     }
     return self;
+}
+
+-(void) setPauseButtonVisible{
+    _pauseButton.visible = YES;
+}
+
+-(void) setHappyMeter:(bool)val{
+    _happyMeter.visible = YES;
+    happyMeterResizing = YES;
 }
 
 - (void)didLoadFromCCB {
@@ -32,7 +47,11 @@
     //_myLabel = _topCloudText;
     animationManager = self.userObject;
     animationManager.delegate = self;
-    [animationManager runAnimationsForSequenceNamed:@"topCloudMoveDown"];
+    //[animationManager runAnimationsForSequenceNamed:@"topCloudMoveDown"];
+    
+    happyMeterMaxWidth = _happyMeter.contentSize.width;
+    happyMeterResizing = NO;
+    happyMeterLength = 1;
     
 
 }
@@ -57,6 +76,13 @@
 }
 
 -(void)update:(CCTime)delta{
+
+    if( happyMeterResizing == YES){
+        happyMeterLength = clampf(happyMeterLength-.0008, 0.0f, 1.0f);
+
+        [_happyMeter setContentSize: CGSizeMake(200 * happyMeterLength,
+                                                _happyMeter.contentSize.height)];
+    }
     
 }
 

@@ -248,7 +248,7 @@
 									<key>value</key>
 									<array>
 										<real>0.26373285055160522</real>
-										<real>0.47699999809265137</real>
+										<real>0.48500001430511475</real>
 									</array>
 								</dict>
 								<dict>
@@ -303,7 +303,7 @@
 						<key>baseValue</key>
 						<array>
 							<real>0.26373285055160522</real>
-							<real>0.47699999809265137</real>
+							<real>0.48500001430511475</real>
 						</array>
 						<key>name</key>
 						<string>position</string>
@@ -312,7 +312,7 @@
 						<key>value</key>
 						<array>
 							<real>0.26373285055160522</real>
-							<real>0.47699999809265137</real>
+							<real>0.48500001430511475</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -367,6 +367,10 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -701,8 +705,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1341,7 +1343,7 @@ stork delivers the baby safely.</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

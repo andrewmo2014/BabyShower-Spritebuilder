@@ -14,7 +14,12 @@
 //@property BOOL changeCloudText;
 //@property CCLabelTTF* myLabel;
 
+@property float happyMeterLength;
+@property BOOL happyMeterResizing;
+
 -(void)changeTextWeak: (NSString *)string;
 -(void)changeTextStrong: (CCLabelTTF *)label;
+-(void)setHappyMeter: (bool) val;
+-(void) setPauseButtonVisible;
 
 @end

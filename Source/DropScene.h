@@ -14,11 +14,11 @@
 @interface DropScene : CCScene <CCPhysicsCollisionDelegate, CCBAnimationManagerDelegate>{
     NSMutableArray *bubbles;
     BOOL nextLevel;
-    AVAudioPlayer *audioPlayer;
+    //AVAudioPlayer *audioPlayer;
 
 }
 
-@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
+//@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
 
 
 @end

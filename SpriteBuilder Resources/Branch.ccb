@@ -25,7 +25,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>SmallBubble</string>
+		<string>Branch</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -39,9 +39,9 @@
 			<key>allowsRotation</key>
 			<false/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>cornerRadius</key>
-			<real>24</real>
+			<real>0.0</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -53,8 +53,28 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>25.718719482421875</real>
-					<real>31.77734375</real>
+					<real>1.0855282545089722</real>
+					<real>48.454303741455078</real>
+				</array>
+				<array>
+					<real>5.5595555305480957</real>
+					<real>25.916193008422852</real>
+				</array>
+				<array>
+					<real>134.39427185058594</real>
+					<real>1.4220705032348633</real>
+				</array>
+				<array>
+					<real>160.61991882324219</real>
+					<real>1.2117127180099487</real>
+				</array>
+				<array>
+					<real>260.20547485351562</real>
+					<real>45.152942657470703</real>
+				</array>
+				<array>
+					<real>56.96063232421875</real>
+					<real>53.451084136962891</real>
 				</array>
 			</array>
 		</dict>
@@ -114,7 +134,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>ccbResources/Current Art/New_bubble.png</string>
+					<string>ccbResources/Current Art/branch-hi.png</string>
 				</array>
 			</dict>
 			<dict>

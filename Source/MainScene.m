@@ -8,6 +8,7 @@
 
 #import "MainScene.h"
 #import "HudDisplay.h"
+#import "OALSimpleAudio.h"
 
 @implementation MainScene{
     HudDisplay *_hud;
@@ -16,21 +17,37 @@
     CCBAnimationManager *animationManager;
 }
 
+@synthesize audioPlayer;
+
+
 -(id)init{
     if (self = [super init]){
+        NSString *mp3Path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"spring_fantasy.mp3"];
+        NSURL *mp3Url = [NSURL fileURLWithPath:mp3Path];
+        
+        AVAudioPlayer *audPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:mp3Url error:NULL];
+        [self setAudioPlayer:audPlayer];
+        audioPlayer.numberOfLoops = -1;
+        audioPlayer.volume = 0.05;
+        //[audioPlayer play];
     }
     return self;
 }
 
 - (void)didLoadFromCCB {
-    _playButton.visible = NO;
+    //_playButton.visible = NO;
     animationManager = self.userObject;
     animationManager.delegate = self;
+    
+    
+    
 }
 
 -(void) onEnter{
     [super onEnter];
     [_hud changeTextStrong:_title];
+    
+    
     
 }
 
@@ -41,9 +58,9 @@
 }
 
 -(void) completedAnimationSequenceNamed:(NSString *)name{
-    if ([name isEqualToString:@"TitleAnim"]){
-        _playButton.visible = YES;
-    }
+    //if ([name isEqualToString:@"TitleAnim"]){
+    //    _playButton.visible = YES;
+    //}
 }
 
 @end

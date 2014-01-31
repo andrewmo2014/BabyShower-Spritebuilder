@@ -86,6 +86,8 @@
 		F03ACFD0189653CA00E72884 /* comedy_bubble_pop_003.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F03ACFCF189653CA00E72884 /* comedy_bubble_pop_003.mp3 */; };
 		F03AD00A18970A4000E72884 /* WorldPhysicsDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03AD00918970A4000E72884 /* WorldPhysicsDelegate.m */; };
 		F03AD0101897B21C00E72884 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = F03AD00F1897B21C00E72884 /* Level.m */; };
+		F03AD014189A7DF600E72884 /* spring_fantasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F03AD013189A7DF600E72884 /* spring_fantasy.mp3 */; };
+		F03AD017189B2D7C00E72884 /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = F03AD016189B2D7C00E72884 /* Branch.m */; };
 		F05B3DBD1894DB9C0077A38E /* HudDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B3DBC1894DB9C0077A38E /* HudDisplay.m */; };
 		F05B3DC01894EC400077A38E /* OpeningScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B3DBF1894EC400077A38E /* OpeningScene.m */; };
 		F05B3DC61894FEF60077A38E /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B3DC51894FEF60077A38E /* Banner.m */; };
@@ -249,6 +251,9 @@
 		F03AD00918970A4000E72884 /* WorldPhysicsDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldPhysicsDelegate.m; path = Source/WorldPhysicsDelegate.m; sourceTree = "<group>"; };
 		F03AD00E1897B21C00E72884 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Source/Level.h; sourceTree = "<group>"; };
 		F03AD00F1897B21C00E72884 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
+		F03AD013189A7DF600E72884 /* spring_fantasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spring_fantasy.mp3; path = Source/Resources/spring_fantasy.mp3; sourceTree = SOURCE_ROOT; };
+		F03AD015189B2D7C00E72884 /* Branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Branch.h; path = Source/Branch.h; sourceTree = "<group>"; };
+		F03AD016189B2D7C00E72884 /* Branch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Branch.m; path = Source/Branch.m; sourceTree = "<group>"; };
 		F05B3DBB1894DB9C0077A38E /* HudDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HudDisplay.h; path = Source/HudDisplay.h; sourceTree = "<group>"; };
 		F05B3DBC1894DB9C0077A38E /* HudDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HudDisplay.m; path = Source/HudDisplay.m; sourceTree = "<group>"; };
 		F05B3DBE1894EC400077A38E /* OpeningScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpeningScene.h; path = Source/OpeningScene.h; sourceTree = "<group>"; };
@@ -284,6 +289,8 @@
 			children = (
 				D2E65BDD1862643A007D0B1F /* libs */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
+				F03AD015189B2D7C00E72884 /* Branch.h */,
+				F03AD016189B2D7C00E72884 /* Branch.m */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
@@ -382,6 +389,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F03AD013189A7DF600E72884 /* spring_fantasy.mp3 */,
 				F03ACFCF189653CA00E72884 /* comedy_bubble_pop_003.mp3 */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
@@ -650,6 +658,7 @@
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B737897A180762440076A88C /* Icon-Small-50.png in Resources */,
+				F03AD014189A7DF600E72884 /* spring_fantasy.mp3 in Resources */,
 				B7378979180762440076A88C /* Icon-72.png in Resources */,
 				D2E65C9C18626890007D0B1F /* ChangeLog in Resources */,
 				B737897D180762440076A88C /* Icon.png in Resources */,
@@ -715,6 +724,7 @@
 				F05B3DC61894FEF60077A38E /* Banner.m in Sources */,
 				D2E65C521862647B007D0B1F /* cpSpaceComponent.c in Sources */,
 				D2E65CA818626890007D0B1F /* vec3.c in Sources */,
+				F03AD017189B2D7C00E72884 /* Branch.m in Sources */,
 				F008B1CA188E1D0000B2E7F1 /* ModeSelector.m in Sources */,
 				D2E65C481862647B007D0B1F /* cpHashSet.c in Sources */,
 				D2E65CA018626890007D0B1F /* mat3.c in Sources */,
@@ -813,7 +823,7 @@
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"\"Source/libs/cocos2d-iphone/external/kazmath/include\"/**",
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
+					"\"Source/libs/cocos2d-iphone\"/**",
 					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
 					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
 					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
@@ -848,7 +858,7 @@
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"\"Source/libs/cocos2d-iphone/external/kazmath/include\"/**",
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
+					"\"Source/libs/cocos2d-iphone\"/**",
 					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
 					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
 					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",

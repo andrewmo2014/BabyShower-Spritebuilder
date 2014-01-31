@@ -8,10 +8,12 @@
 
 #import "BabyBoy.h"
 
+
 @implementation BabyBoy{
 
     CMMotionManager *motionManager;
     CMGyroData *myGyro;
+    float staticRotation;
     
 }
 
@@ -28,7 +30,7 @@
         _isDeactive = NO;
         _deactiveX = NO;
         _deactiveX = NO;
-
+        
     }
     return self;
 }
@@ -40,6 +42,8 @@
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     self.physicsBody.collisionType = @"baby";
+    
+    staticRotation = self.rotation;
     
     
 }
@@ -65,36 +69,48 @@
         CGPoint pos = self.position;
         
         if( _deactiveX == NO ){
-            pos.x += roll/10.0;
+            pos.x += roll/50.0;
         }
     
         if (_deactiveY == NO){
             if (_slowDown){
-                pos.y += 0.004;
+                pos.y += 0.0035;
             }
             else{
-                pos.y -= 0.002;
+                pos.y -= 0.00125;
             }
         }
     
-        if( pos.x <= 0){
-            pos.x = 0;
+        if( pos.x <= ((self.spriteFrame.rect.size.width/2.0)/320)){
+            pos.x = ((self.spriteFrame.rect.size.width/2.0)/320);
         }
-        else if( pos.x >= 1){
-            pos.x = 1;
-        }
-    
-        if( pos.y <= 0){
-            pos.y = 0;
-        }
-        else if( pos.y >= 1){
-            pos.y = 1;
+        else if( pos.x >= ((320 - (self.spriteFrame.rect.size.width/2.0))/320)){
+            pos.x = ((320 - (self.spriteFrame.rect.size.width/2.0))/320);
         }
     
+        if( pos.y <= .06){
+            pos.y = .06;
+        }
+        else if( pos.y >= .65){
+            pos.y = .65;
+        }
+        
+        //CGPoint newPosMine = [self convertToWorldSpace:self.position];
+        //CGPoint newPosTemp = [self convertToWorldSpace:pos];
+        
+        //CCLOG(@"My position is %0.02f %0.02f", pos.x, pos.y );
+        //CCLOG(@"My position is %0.02f", self.spriteFrame.rect.size.width/(2*320) );
+
+        //CCLOG(@"My Temp position is %0.02f %0.02f", newPosTemp.x, newPosTemp.y );
+
+
         //CCLOG(@"My position is %0.02f %0.02f", self.position.x, self.position.y );
+        //CCLOG(@"My sprite Frame is %0.02f %0.02f", self.spriteFrame.rect.size.width, self.spriteFrame.rect.size.height );
+
 
     
         self.position = pos;
+        self.rotation = staticRotation;
     }
     
 }

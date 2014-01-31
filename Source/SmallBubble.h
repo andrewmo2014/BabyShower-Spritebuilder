@@ -7,10 +7,18 @@
 //
 
 #import "CCSprite.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface SmallBubble : CCSprite
+@interface SmallBubble : CCSprite{
+    AVAudioPlayer *audioPlayer;
+
+}
 
 @property float speed;
+
+@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
+
 
 
 @end

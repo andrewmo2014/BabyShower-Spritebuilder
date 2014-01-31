@@ -7,8 +7,14 @@
 //
 
 #import "CCNode.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
+@interface MainScene : CCNode <CCBAnimationManagerDelegate>{
+        AVAudioPlayer *audioPlayer;
+}
 
-@interface MainScene : CCNode <CCBAnimationManagerDelegate>
+@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
+
 
 @end
