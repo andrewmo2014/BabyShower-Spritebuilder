@@ -14,6 +14,7 @@
 #import "Banner.h"
 
 CCNode* level;
+
 NSString* openText1 = @"The baby is on the way...";
 NSString* openText2 = @"Tilt left \n \n ";
 NSString* openText3 = @"Tilt right \n \n ";
@@ -29,9 +30,7 @@ NSString* openText8 = @"Congrats, tutorial done.";
 NSString* currentText;
 int currentLevel;
 
-BOOL isTutorial;
 BOOL isStarting;
-
 float levelSpeed;
 
 @implementation DropScene{
@@ -51,6 +50,8 @@ float levelSpeed;
 }
 
 //@synthesize audioPlayer;
+@synthesize isTutorial;
+
 
 -(id)init{
     if (self = [super init]){
@@ -58,9 +59,10 @@ float levelSpeed;
         levelContainer = [[NSMutableArray alloc] init];
 
         nextLevel = NO;
-        isTutorial = YES;
         isStarting = YES;
         levelSpeed = 0.0f;
+        
+        isTutorial = YES;
         
         //NSString *mp3Path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"comedy_bubble_pop_003.mp3"];
         //NSURL *mp3Url = [NSURL fileURLWithPath:mp3Path];
@@ -130,8 +132,6 @@ float levelSpeed;
 
 -(void)mainMenu{
     [[CCDirector sharedDirector] resume];
-
-    
     CCScene *gameLayerScene = [CCBReader loadAsScene:@"ModeSelector"];
     [[CCDirector sharedDirector] replaceScene: gameLayerScene];
     
@@ -154,11 +154,19 @@ float levelSpeed;
 
 -(void) onEnter{
     [super onEnter];
+    [[CCDirector sharedDirector] resume];
+
     
     [animationManager runAnimationsForSequenceNamed:@"InitialDrop"];
 
     if( isTutorial){
         [_banner changeTextWeak:@"Tutorial"];
+        [self instructionsText:openText1];
+        currentLevel = 0;
+        _fallingBaby.isDeactive = YES;
+    }
+    else{
+        [_banner changeTextWeak:@"Level1"];
         [self instructionsText:openText1];
         currentLevel = 0;
         _fallingBaby.isDeactive = YES;
@@ -181,8 +189,10 @@ float levelSpeed;
     _fallingBaby.isDeactive = NO;
     _fallingBaby.deactiveY = YES;
     
-    [self instructionsText:openText2];
-    [_hud setCloudIm:@"TiltLeft":YES];
+    if( isTutorial){
+        [self instructionsText:openText2];
+        [_hud setCloudIm:@"TiltLeft":YES];
+    }
     
     isStarting = NO;
 
@@ -329,66 +339,104 @@ float levelSpeed;
         if (nextLevel == YES){
             switch (currentLevel) {
                 case 0:
+                    if( isTutorial){
                     [self instructionsText:openText3];
                     [_hud setCloudIm:@"TiltRight": YES];
                     [_hud setCloudIm:@"TiltLeft": NO];
+                    }
                     [self updateLevel];
+
                     break;
                 case 1:
+                    if( isTutorial){
+
                     [self instructionsText:openText2];
                     [_hud setCloudIm:@"TiltRight": NO];
                     [_hud setCloudIm:@"TiltLeft": YES];
+                    }
                     [self updateLevel];
+
                     break;
                 case 2:
+                    if( isTutorial){
+
                     [self instructionsText:openText3];
                     [_hud setCloudIm:@"TiltRight": YES];
                     [_hud setCloudIm:@"TiltLeft": NO];
+                    }
                     [self updateLevel];
+
                     break;
                 case 3:
+                    if( isTutorial){
                     [self instructionsText:openText4];
                     [_hud setCloudIm:@"TiltRight": NO];
                     [_hud setCloudIm:@"TiltLeft": NO];
                     [_hud setCloudIm:@"PressDown": YES];
                     _fallingBaby.isDeactive = NO;
                     _fallingBaby.deactiveY = NO;
+                    }
                     [self updateLevel];
                     break;
                 case 4:
+                    if( isTutorial){
+
                     [self instructionsText:openText5];
                     [_hud setCloudIm:@"PressUp": YES];
                     [_hud setCloudIm:@"PressDown": NO];
+                    }
                     [self updateLevel];
+
                     break;
                 case 5:
+                    if( isTutorial){
                     [self instructionsText:openText4];
                     [_hud setCloudIm:@"PressUp": NO];
                     [_hud setCloudIm:@"PressDown": YES];
+                    }
                     [self updateLevel];
+
                     break;
                 case 6:
+                    if( isTutorial){
+
                     [self instructionsText:openText5];
                     [_hud setCloudIm:@"PressUp": YES];
                     [_hud setCloudIm:@"PressDown": NO];
                     [self updateLevel];
+                    }
                     break;
                 case 7:
                     levelSpeed = 1.2f;
                     [self updateLevel];
+
+                    if( isTutorial){
                     [_hud setCloudIm:@"PressUp": NO];
                     [self instructionsText:openText6];
+                    }
                     [_hud setHappyMeter:true];
 
                     break;
                 case 8:
+                    if( isTutorial){
                     [self instructionsText:openText7];
+                    }
                     [self updateLevel];
+                    
                     break;
                 case 9:
-                    [self instructionsText:openText8];
-                    [self gameWon];
+                     if( isTutorial){
+                         [self instructionsText:openText8];
+                         [self gameWon];
+                     }
+                     else{
+                         [self updateLevel];
+                     }
                     break;
+                case 10:
+                    [self updateLevel];
+                case 11:
+                    [self gameWon];
                 default:
                     break;
             }
@@ -412,7 +460,7 @@ float levelSpeed;
 
 -(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair baby:(CCNode *)babyNode bubble:(CCNode *)bubbleNode{
     CCLOG( @"I hit a bubble");
-    [[(SmallBubble*)bubbleNode audioPlayer] play];
+    //[[(SmallBubble*)bubbleNode audioPlayer] play];
     [bubbleNode removeFromParent];
     
     [bubbles removeObject:bubbleNode];

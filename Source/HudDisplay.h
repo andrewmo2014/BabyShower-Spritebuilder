@@ -16,6 +16,7 @@
 
 @property float happyMeterLength;
 @property BOOL happyMeterResizing;
+@property BOOL doneDrop;
 
 -(void)changeTextWeak: (NSString *)string;
 -(void)changeTextStrong: (CCLabelTTF *)label;

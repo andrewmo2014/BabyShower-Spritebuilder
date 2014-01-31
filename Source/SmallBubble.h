@@ -11,13 +11,13 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface SmallBubble : CCSprite{
-    AVAudioPlayer *audioPlayer;
+    //AVAudioPlayer *audioPlayer;
 
 }
 
 @property float speed;
 
-@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
+//@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
 
 
 

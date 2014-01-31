@@ -20,6 +20,9 @@
 
 }
 
+@property BOOL isTutorial;
+
+
 //@property(nonatomic, retain) AVAudioPlayer *audioPlayer;
 
 

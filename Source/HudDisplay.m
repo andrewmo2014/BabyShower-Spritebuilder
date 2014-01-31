@@ -27,6 +27,8 @@ float happyMeterMaxWidth;
 
 @synthesize happyMeterLength;
 @synthesize happyMeterResizing;
+@synthesize doneDrop;
+
 
 -(id)init{
     if(self=[super init]){
@@ -51,6 +53,7 @@ float happyMeterMaxWidth;
     happyMeterMaxWidth = _happyMeter.contentSize.width;
     happyMeterResizing = NO;
     happyMeterLength = 1;
+    doneDrop = NO;
     
     _tiltLeft.visible = NO;
     _tiltRight.visible = NO;
@@ -93,6 +96,7 @@ float happyMeterMaxWidth;
 -(void) completedAnimationSequenceNamed:(NSString *)name{
     if ([name isEqualToString:@"topCloudMoveDown"]){
         CCLOG(@"initial drop is over");
+        doneDrop = YES;
     }
 }
 

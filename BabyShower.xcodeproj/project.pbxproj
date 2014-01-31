@@ -88,6 +88,7 @@
 		F03AD0101897B21C00E72884 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = F03AD00F1897B21C00E72884 /* Level.m */; };
 		F03AD014189A7DF600E72884 /* spring_fantasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F03AD013189A7DF600E72884 /* spring_fantasy.mp3 */; };
 		F03AD017189B2D7C00E72884 /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = F03AD016189B2D7C00E72884 /* Branch.m */; };
+		F03AD01A189C291500E72884 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = F03AD019189C291500E72884 /* Credits.m */; };
 		F05B3DBD1894DB9C0077A38E /* HudDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B3DBC1894DB9C0077A38E /* HudDisplay.m */; };
 		F05B3DC01894EC400077A38E /* OpeningScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B3DBF1894EC400077A38E /* OpeningScene.m */; };
 		F05B3DC61894FEF60077A38E /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = F05B3DC51894FEF60077A38E /* Banner.m */; };
@@ -254,6 +255,8 @@
 		F03AD013189A7DF600E72884 /* spring_fantasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spring_fantasy.mp3; path = Source/Resources/spring_fantasy.mp3; sourceTree = SOURCE_ROOT; };
 		F03AD015189B2D7C00E72884 /* Branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Branch.h; path = Source/Branch.h; sourceTree = "<group>"; };
 		F03AD016189B2D7C00E72884 /* Branch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Branch.m; path = Source/Branch.m; sourceTree = "<group>"; };
+		F03AD018189C291500E72884 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Credits.h; path = Source/Credits.h; sourceTree = "<group>"; };
+		F03AD019189C291500E72884 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Credits.m; path = Source/Credits.m; sourceTree = "<group>"; };
 		F05B3DBB1894DB9C0077A38E /* HudDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HudDisplay.h; path = Source/HudDisplay.h; sourceTree = "<group>"; };
 		F05B3DBC1894DB9C0077A38E /* HudDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HudDisplay.m; path = Source/HudDisplay.m; sourceTree = "<group>"; };
 		F05B3DBE1894EC400077A38E /* OpeningScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpeningScene.h; path = Source/OpeningScene.h; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 				F05B3DBF1894EC400077A38E /* OpeningScene.m */,
 				F008B1CD188E1D8800B2E7F1 /* DropScene.h */,
 				F008B1CE188E1D8800B2E7F1 /* DropScene.m */,
+				F03AD018189C291500E72884 /* Credits.h */,
+				F03AD019189C291500E72884 /* Credits.m */,
 				F03AD00E1897B21C00E72884 /* Level.h */,
 				F03AD00F1897B21C00E72884 /* Level.m */,
 				F03ACFB61896491500E72884 /* SmallBubble.h */,
@@ -728,6 +733,7 @@
 				F008B1CA188E1D0000B2E7F1 /* ModeSelector.m in Sources */,
 				D2E65C481862647B007D0B1F /* cpHashSet.c in Sources */,
 				D2E65CA018626890007D0B1F /* mat3.c in Sources */,
+				F03AD01A189C291500E72884 /* Credits.m in Sources */,
 				D2E65C581862647B007D0B1F /* cpSweep1D.c in Sources */,
 				D2E65C9B18626890007D0B1F /* aabb.c in Sources */,
 				D2E65CA618626890007D0B1F /* utility.c in Sources */,

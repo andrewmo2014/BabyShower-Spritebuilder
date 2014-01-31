@@ -28,6 +28,7 @@
 
 -(void) onEnter{
     [super onEnter];
+    [[CCDirector sharedDirector] resume];
     [_hud changeTextStrong:_title];
     [animationManager runAnimationsForSequenceNamed:@"introductionAnim"];
 
