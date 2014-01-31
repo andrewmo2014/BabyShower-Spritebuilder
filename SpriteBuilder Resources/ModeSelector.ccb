@@ -196,8 +196,6 @@
 						<string>HudDisplay.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>animatedProperties</key>
@@ -374,8 +372,8 @@ TIME</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.016804177314043045</real>
-							<real>0.19835096597671509</real>
+							<real>0.50341135263442993</real>
+							<real>0.83614826202392578</real>
 							<real>1</real>
 							<real>1</real>
 						</array>
@@ -430,6 +428,8 @@ TIME</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>animatedProperties</key>
@@ -849,7 +849,7 @@ TIME</string>
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Levels</string>
+							<string>New Game</string>
 							<false/>
 						</array>
 					</dict>
@@ -1272,7 +1272,7 @@ TIME</string>
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>New Game</string>
+							<string>Tutorial</string>
 							<false/>
 						</array>
 					</dict>

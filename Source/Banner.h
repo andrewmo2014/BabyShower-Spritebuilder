@@ -10,4 +10,6 @@
 
 @interface Banner : CCNode
 
+-(void)changeTextWeak: (NSString *)string;
+
 @end

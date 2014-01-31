@@ -88,11 +88,11 @@
             pos.x = ((320 - (self.spriteFrame.rect.size.width/2.0))/320);
         }
     
-        if( pos.y <= .06){
-            pos.y = .06;
+        if( pos.y <= .12){
+            pos.y = .12;
         }
-        else if( pos.y >= .65){
-            pos.y = .65;
+        else if( pos.y >= .50){
+            pos.y = .50;
         }
         
         //CGPoint newPosMine = [self convertToWorldSpace:self.position];

@@ -18,6 +18,10 @@ float happyMeterMaxWidth;
     CCNode *_bottomCloud;
     CCNode *_happyMeter;
     CCNode *_pauseButton;
+    CCNode *_tiltLeft;
+    CCNode *_tiltRight;
+    CCNode *_pressDown;
+    CCNode *_pressUp;
     CCBAnimationManager *animationManager;
     
 }
@@ -53,6 +57,28 @@ float happyMeterMaxWidth;
     happyMeterResizing = NO;
     happyMeterLength = 1;
     
+    _tiltLeft.visible = NO;
+    _tiltRight.visible = NO;
+    _pressDown.visible = NO;
+    _pressUp.visible = NO;
+    
+
+}
+
+-(void)setCloudIm: (NSString*)string2: (BOOL)val{
+    CCLOG( @"setting cloud pic");
+    if( [string2 isEqualToString:@"TiltLeft"]){
+        _tiltLeft.visible = val;
+    }
+    if( [string2 isEqualToString:@"TiltRight"]){
+        _tiltRight.visible = val;
+    }
+    if( [string2 isEqualToString:@"PressDown"]){
+        _pressDown.visible = val;
+    }
+    if( [string2 isEqualToString:@"PressUp"]){
+        _pressUp.visible = val;
+    }
 
 }
 

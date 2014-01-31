@@ -11,12 +11,20 @@
 #import "HudDisplay.h"
 #import "SmallBubble.h"
 #import "Branch.h"
+#import "Banner.h"
 
 CCNode* level;
 NSString* openText1 = @"The baby is on the way...";
-NSString* openText2 = @"Tilt to move left or right.\nTry popping the bubbles.";
-NSString* openText3 = @"Press the screen to move up,\nRelease to fall back down.";
-NSString* openText4 = @"Bubbles fill the baby's happy meter,\nKeep popping and avoid obstacles";
+NSString* openText2 = @"Tilt left \n \n ";
+NSString* openText3 = @"Tilt right \n \n ";
+
+NSString* openText4 = @"Press Down \n \n ";
+NSString* openText5 = @"Release \n \n ";
+
+NSString* openText6 = @"Fill your happy meter below. \nBefore baby gets upset.";
+NSString* openText7 = @"Avoid the obstacles, \nor baby gets mad.";
+NSString* openText8 = @"Congrats, tutorial done.";
+
 
 NSString* currentText;
 int currentLevel;
@@ -30,6 +38,7 @@ float levelSpeed;
     BabyBoy *_fallingBaby;
     HudDisplay *_hud;
     CCLabelTTF *_title;
+    Banner *_banner;
     CCPhysicsNode *_worldPhysics;
     //CCNode *_level;
     CCBAnimationManager *animationManager;
@@ -40,6 +49,8 @@ float levelSpeed;
 -(id)init{
     if (self = [super init]){
         bubbles = [[NSMutableArray alloc] init];
+        levelContainer = [[NSMutableArray alloc] init];
+
         nextLevel = NO;
         isTutorial = YES;
         isStarting = YES;
@@ -63,8 +74,7 @@ float levelSpeed;
         currentText = openText1;
         _fallingBaby.isDeactive = YES;
         [self performSelector:@selector(instructionsText:) withObject:openText1 afterDelay:0.0f];
-        [self performSelector:@selector(instructionsText:) withObject:openText2 afterDelay:4.0f];
-        [self performSelector:@selector(LoadStage1) withObject:nil afterDelay:7.0f];
+        [self performSelector:@selector(LoadStage1) withObject:nil afterDelay:4.0f];
     }
 }
 
@@ -82,6 +92,9 @@ float levelSpeed;
     [self resetBubbleCount];
     _fallingBaby.isDeactive = NO;
     _fallingBaby.deactiveY = YES;
+    
+    [self instructionsText:openText2];
+    [_hud setCloudIm:@"TiltLeft":YES];
     
     isStarting = NO;
 
@@ -115,8 +128,7 @@ float levelSpeed;
     animationManager.delegate = self;
     
     [_hud setPauseButtonVisible];
-    
-
+    [_banner changeTextWeak:@"Tutorial"];
     
     
     //Lets Do tutorial first
@@ -146,6 +158,7 @@ float levelSpeed;
             Branch *branch = [levelContents objectAtIndex:i];
             branch.speed = levelSpeed;
         }
+        [levelContainer addObject:[levelContents objectAtIndex:i]];
     }
     
     [level.userObject runAnimationsForSequenceNamed:@"levelMove"];
@@ -183,48 +196,104 @@ float levelSpeed;
 
 -(void) update:(CCTime)delta{
     
-    //CCLOG( @"current level is %.02d", currentLevel);
+    CCLOG( @"current container is %.02d", [levelContainer count]);
 
     if (isStarting == NO){
         
+        for (int i=0; i<[levelContainer count]; i++) {
+            if( [[levelContainer objectAtIndex:i] isKindOfClass:[SmallBubble class]] ){
+                SmallBubble *bub = [levelContainer objectAtIndex:i];
+                if (bub.position.y > 420 ){
+                    [levelContainer removeObjectAtIndex:i];
+                }
+            }
+            else if( [[levelContainer objectAtIndex:i] isKindOfClass:[Branch class]] ){
+                Branch *branch = [levelContainer objectAtIndex:i];
+                if (branch.position.y > 420 ){
+                    [levelContainer removeObjectAtIndex:i];
+                }
+            }
+        }
+
+        
+        /*
         for( int i = 0; i<[bubbles count]; i++){
             SmallBubble *bub = [bubbles objectAtIndex:i];
-            if (bub.position.y > 1 ){
+            if (bub.position.y > 420 ){
                 [bubbles removeObjectAtIndex:i];
             }
         }
+         */
         
-        if( bubbles.count == 0){
+        if( [levelContainer count] == 0){
             nextLevel = YES;
         }
     
         if (nextLevel == YES){
-            if( currentLevel < 4 ){
-                [self updateLevel];
-            }
-            if( currentLevel >= 4 && currentLevel < 8 ){
-                if( currentLevel == 4 ){
-                    [self performSelector:@selector(instructionsText:) withObject:openText3 afterDelay:0.0f];
-                    [self performSelector:@selector(LoadStage2) withObject:nil afterDelay:4.0f];
-                }
-                else{
+            switch (currentLevel) {
+                case 0:
+                    [self instructionsText:openText3];
+                    [_hud setCloudIm:@"TiltRight": YES];
+                    [_hud setCloudIm:@"TiltLeft": NO];
                     [self updateLevel];
-                }
-            }
-            
-            if( currentLevel >= 8 ){
-                if( currentLevel == 8 ){
+                    break;
+                case 1:
+                    [self instructionsText:openText2];
+                    [_hud setCloudIm:@"TiltRight": NO];
+                    [_hud setCloudIm:@"TiltLeft": YES];
+                    [self updateLevel];
+                    break;
+                case 2:
+                    [self instructionsText:openText3];
+                    [_hud setCloudIm:@"TiltRight": YES];
+                    [_hud setCloudIm:@"TiltLeft": NO];
+                    [self updateLevel];
+                    break;
+                case 3:
+                    [self instructionsText:openText4];
+                    [_hud setCloudIm:@"TiltRight": NO];
+                    [_hud setCloudIm:@"TiltLeft": NO];
+                    [_hud setCloudIm:@"PressDown": YES];
+                    _fallingBaby.isDeactive = NO;
+                    _fallingBaby.deactiveY = NO;
+                    [self updateLevel];
+                    break;
+                case 4:
+                    [self instructionsText:openText5];
+                    [_hud setCloudIm:@"PressUp": YES];
+                    [_hud setCloudIm:@"PressDown": NO];
+                    [self updateLevel];
+                    break;
+                case 5:
+                    [self instructionsText:openText4];
+                    [_hud setCloudIm:@"PressUp": NO];
+                    [_hud setCloudIm:@"PressDown": YES];
+                    [self updateLevel];
+                    break;
+                case 6:
+                    [self instructionsText:openText5];
+                    [_hud setCloudIm:@"PressUp": YES];
+                    [_hud setCloudIm:@"PressDown": NO];
+                    [self updateLevel];
+                    break;
+                case 7:
                     levelSpeed = 1.2f;
-                    [self performSelector:@selector(instructionsText:) withObject:openText4 afterDelay:0.0f];
                     [self updateLevel];
+                    [_hud setCloudIm:@"PressUp": NO];
+                    [self instructionsText:openText6];
                     [_hud setHappyMeter:true];
 
-                }
-                //else{
-                //    [self updateLevel];
-                //}
+                    break;
+                case 8:
+                    [self instructionsText:openText7];
+                    [self updateLevel];
+                    break;
+                case 9:
+                    [self instructionsText:openText8];
+                    break;
+                default:
+                    break;
             }
-            
         }
         
     }
@@ -242,7 +311,10 @@ float levelSpeed;
     CCLOG( @"I hit a bubble");
     [[(SmallBubble*)bubbleNode audioPlayer] play];
     [bubbleNode removeFromParent];
+    
     [bubbles removeObject:bubbleNode];
+    [levelContainer removeObject:bubbleNode];
+
     
     if (_hud.happyMeterResizing == YES){
         _hud.happyMeterLength = clampf(_hud.happyMeterLength+.03f, 0.0f, 1.0f);

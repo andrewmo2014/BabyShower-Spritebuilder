@@ -29,7 +29,6 @@
     CGPoint pos = self.position;
     pos.y += speed;
     self.position  = pos;
-    CCLOG(@"my pos %.02f, %.02f", pos.x, pos.y);
 }
 
 

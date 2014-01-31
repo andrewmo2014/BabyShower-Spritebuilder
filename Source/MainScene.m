@@ -38,6 +38,8 @@
     //_playButton.visible = NO;
     animationManager = self.userObject;
     animationManager.delegate = self;
+    _playButton.visible = YES;
+    _playButton.enabled = NO;
     
     
     
@@ -46,7 +48,8 @@
 -(void) onEnter{
     [super onEnter];
     [_hud changeTextStrong:_title];
-    
+    [animationManager runAnimationsForSequenceNamed:@"TitleAnim"];
+
     
     
 }
@@ -58,9 +61,9 @@
 }
 
 -(void) completedAnimationSequenceNamed:(NSString *)name{
-    //if ([name isEqualToString:@"TitleAnim"]){
-    //    _playButton.visible = YES;
-    //}
+    if ([name isEqualToString:@"TitleAnim"]){
+        _playButton.enabled = YES;
+    }
 }
 
 @end

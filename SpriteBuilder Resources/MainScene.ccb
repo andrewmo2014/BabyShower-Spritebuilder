@@ -566,8 +566,8 @@ SHOWER</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.016804177314043045</real>
-							<real>0.19835096597671509</real>
+							<real>0.46289229393005371</real>
+							<real>0.72824060916900635</real>
 							<real>1</real>
 							<real>1</real>
 						</array>
@@ -1249,6 +1249,8 @@ SHOWER</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1373,7 +1375,7 @@ SHOWER</string>
 	<array>
 		<dict>
 			<key>autoPlay</key>
-			<true/>
+			<false/>
 			<key>callbackChannel</key>
 			<dict>
 				<key>keyframes</key>

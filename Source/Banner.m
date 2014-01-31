@@ -10,7 +10,11 @@
 
 @implementation Banner{
     CCNode *_bannerType;
-    CCNode *_bannerText;
+    CCLabelTTF *_bannerText;
+}
+
+-(void)changeTextWeak: (NSString *)string{
+    [_bannerText setString: string];
 }
 
 @end
