@@ -367,8 +367,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -567,7 +565,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.05000000074505806</real>
+							<real>-0.070000007748603821</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -850,6 +848,14 @@ stork delivers the baby safely.</string>
 				<array>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>name</string>
 						<key>type</key>
 						<string>StringSimple</string>
@@ -1045,7 +1051,7 @@ stork delivers the baby safely.</string>
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Chalkduster</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1299,7 +1305,7 @@ stork delivers the baby safely.</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.60000002384185791</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

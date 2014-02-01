@@ -168,7 +168,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.21896551549434662</real>
+							<real>0.10000000149011612</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -444,8 +444,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -477,11 +475,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>157</real>
-							<real>322</real>
+							<real>0.5</real>
+							<real>0.43724137544631958</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -700,7 +698,7 @@ SpriteBuilder
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.86228740215301514</real>
+							<real>0.77780461311340332</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>

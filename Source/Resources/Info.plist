@@ -12,6 +12,30 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
+		<string>GodSpeed Games_icon_80</string>
+		<string>GodSpeed Games_icon_58</string>
+		<string>GodSpeed Games_icon_29</string>
+		<string>GodSpeed Games_icon_120</string>
+		<string>GodSpeed Games_icon_114</string>
+		<string>GodSpeed Games_icon_57</string>
+		<string>BabyShowerPlay_icon</string>
+		<string>BabyShowerPlay</string>
+		<string>Icon.png</string>
+		<string>Icon@2x.png</string>
+		<string>Icon-72.png</string>
+		<string>Icon-Small-50.png</string>
+		<string>Icon-Small.png</string>
+		<string>Icon-Small@2x.png</string>
+	</array>
+	<key>CFBundleIconFiles~ipad</key>
+	<array>
+		<string>GodSpeed Games_icon_50</string>
+		<string>GodSpeed Games_icon_72</string>
+		<string>GodSpeed Games_icon_120</string>
+		<string>GodSpeed Games_icon_114</string>
+		<string>GodSpeed Games_icon_57</string>
+		<string>BabyShowerPlay_icon</string>
+		<string>BabyShowerPlay</string>
 		<string>Icon.png</string>
 		<string>Icon@2x.png</string>
 		<string>Icon-72.png</string>
@@ -47,7 +71,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

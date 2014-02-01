@@ -61,6 +61,12 @@
     [[CCDirector sharedDirector] replaceScene: gameLayerScene];
 }
 
+-(void)back{
+    [[CCDirector sharedDirector] resume];
+    CCScene *gameLayerScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene: gameLayerScene];
+}
+
 -(void)update:(CCTime)delta{
     if([_hud doneDrop] == YES){
         CCLOG(@"checking drop");
